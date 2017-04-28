@@ -1,5 +1,10 @@
 import { Meteor } from 'meteor/meteor';
 
-Meteor.startup(() => {
-  // code to run on server at startup
+import { Players } from './../imports/api/players';
+
+Meteor.startup(function() {
+  // Players.insert({
+  //   name: 'Enrique',
+  //   score: 94
+  // });
 });
