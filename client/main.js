@@ -12,6 +12,16 @@ const renderPlayers = playersList => {
     return (
       <p key={_id}>
         {name} has {score} point(s).
+        <button onClick={() => {
+          Players.update({ _id }, {
+            $inc: { score: -1 }
+          });
+        }}>-1</button>
+        <button onClick={() => {
+          Players.update({ _id }, {
+            $inc: { score: 1 }
+          });
+        }}>+1</button>
         <button onClick={() => Players.remove({ _id })}>x</button>
       </p>
     );
